@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
   }
 
-  openGameDetails(id: string): void {
+  openGameDetails(id: number): void {
     this.router.navigate(['details', id]);
   }
 
