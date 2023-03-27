@@ -4,21 +4,22 @@
         <mat-select
             panelClass="sort-select"
             [(ngModel)]="sort"
+            (selectionChange)="searchGames(sort)"
         >
-        <mat-option value="name">Name</mat-option>
-        <mat-option value="-released">Released</mat-option>
-        <mat-option value="-added">Added</mat-option>
-        <mat-option value="-created">Created</mat-option>
-        <mat-option value="-updated">Name</mat-option>
-        <mat-option value="-rating">Name</mat-option>
-        <mat-option value="metacritic">Metacritic</mat-option>
+            <mat-option value="name">Name</mat-option>
+            <mat-option value="-released">Released</mat-option>
+            <mat-option value="-added">Added</mat-option>
+            <mat-option value="-created">Created</mat-option>
+            <mat-option value="-updated">Name</mat-option>
+            <mat-option value="-rating">Rating</mat-option>
+            <mat-option value="metacritic">Metacritic</mat-option>
         </mat-select>
     </mat-form-field>
 </div>
 
 <div class="games">
     <ng-container *ngFor="let game of games">
-        <div class="game">
+        <div class="game" (click)="openGameDetails(game.id)">
             <div class="game-thumb-container">
                 <img 
                     *ngIf="game.background_image"

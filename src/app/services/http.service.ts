@@ -11,7 +11,7 @@ export class HttpService {
 
   constructor(private http: HttpClient) { }
 
-  getGamList(
+  getGameList(
     ordering: string,
     search?: string
   ): Observable<APIResponse<Game>> {
