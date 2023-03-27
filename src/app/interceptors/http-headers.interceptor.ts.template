@@ -9,7 +9,7 @@ export class HttpHeadersInterceptor implements HttpInterceptor {
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         req = req.clone({
             setHeaders: {
-                'x-rapidapi-key': 'afef98294fmshfe38949f758d15cp11b372jsnadf0bfd9fb2d',
+                'x-rapidapi-key': '[ADD API KEY]',
                 'x-rapidapi-host' : 'rawg-video-games-database.p.rapidapi.com'
             },
             setParams:{
